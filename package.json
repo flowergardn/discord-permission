@@ -1,6 +1,6 @@
 {
   "name": "discord-permission",
-  "version": "1.0.0",
+  "version": "1.0.2",
   "description": "A Discord permissions calculator",
   "main": "dist/index.js",
   "scripts": {
@@ -15,6 +15,14 @@
     "discord-oauth",
     "permissions"
   ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/astridlol/discord-permission"
+  },
+  "bugs": {
+    "url": "https://github.com/astridlol/discord-permission/issues"
+  },
+  "homepage": "https://github.com/astridlol/discord-permission",
   "author": "Astrid",
   "license": "MIT",
   "dependencies": {
