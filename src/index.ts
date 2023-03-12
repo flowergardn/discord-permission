@@ -1,4 +1,4 @@
-type Permissions =
+export type Permissions =
   | "CREATE_INSTANT_INVITE"
   | "KICK_MEMBERS"
   | "BAN_MEMBERS"

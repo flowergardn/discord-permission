@@ -1,0 +1,55 @@
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.calculate = void 0;
+var Bitfields;
+(function (Bitfields) {
+    Bitfields[Bitfields["CREATE_INSTANT_INVITE"] = 0] = "CREATE_INSTANT_INVITE";
+    Bitfields[Bitfields["KICK_MEMBERS"] = 1] = "KICK_MEMBERS";
+    Bitfields[Bitfields["BAN_MEMBERS"] = 2] = "BAN_MEMBERS";
+    Bitfields[Bitfields["ADMINISTRATOR"] = 3] = "ADMINISTRATOR";
+    Bitfields[Bitfields["MANAGE_CHANNELS"] = 4] = "MANAGE_CHANNELS";
+    Bitfields[Bitfields["MANAGE_GUILD"] = 5] = "MANAGE_GUILD";
+    Bitfields[Bitfields["ADD_REACTIONS"] = 6] = "ADD_REACTIONS";
+    Bitfields[Bitfields["VIEW_AUDIT_LOG"] = 7] = "VIEW_AUDIT_LOG";
+    Bitfields[Bitfields["PRIORITY_SPEAKER"] = 8] = "PRIORITY_SPEAKER";
+    Bitfields[Bitfields["STREAM"] = 9] = "STREAM";
+    Bitfields[Bitfields["VIEW_CHANNEL"] = 10] = "VIEW_CHANNEL";
+    Bitfields[Bitfields["SEND_MESSAGES"] = 11] = "SEND_MESSAGES";
+    Bitfields[Bitfields["SEND_TTS_MESSAGES"] = 12] = "SEND_TTS_MESSAGES";
+    Bitfields[Bitfields["MANAGE_MESSAGES"] = 13] = "MANAGE_MESSAGES";
+    Bitfields[Bitfields["EMBED_LINKS"] = 14] = "EMBED_LINKS";
+    Bitfields[Bitfields["ATTACH_FILES"] = 15] = "ATTACH_FILES";
+    Bitfields[Bitfields["READ_MESSAGE_HISTORY"] = 16] = "READ_MESSAGE_HISTORY";
+    Bitfields[Bitfields["MENTION_EVERYONE"] = 17] = "MENTION_EVERYONE";
+    Bitfields[Bitfields["USE_EXTERNAL_EMOJIS"] = 18] = "USE_EXTERNAL_EMOJIS";
+    Bitfields[Bitfields["VIEW_GUILD_INSIGHTS"] = 19] = "VIEW_GUILD_INSIGHTS";
+    Bitfields[Bitfields["CONNECT"] = 20] = "CONNECT";
+    Bitfields[Bitfields["SPEAK"] = 21] = "SPEAK";
+    Bitfields[Bitfields["MUTE_MEMBERS"] = 22] = "MUTE_MEMBERS";
+    Bitfields[Bitfields["DEAFEN_MEMBERS"] = 23] = "DEAFEN_MEMBERS";
+    Bitfields[Bitfields["MOVE_MEMBERS"] = 24] = "MOVE_MEMBERS";
+    Bitfields[Bitfields["USE_VAD"] = 25] = "USE_VAD";
+    Bitfields[Bitfields["CHANGE_NICKNAME"] = 26] = "CHANGE_NICKNAME";
+    Bitfields[Bitfields["MANAGE_NICKNAMES"] = 27] = "MANAGE_NICKNAMES";
+    Bitfields[Bitfields["MANAGE_ROLES"] = 28] = "MANAGE_ROLES";
+    Bitfields[Bitfields["MANAGE_WEBHOOKS"] = 29] = "MANAGE_WEBHOOKS";
+    Bitfields[Bitfields["MANAGE_EMOJIS_AND_STICKERS"] = 30] = "MANAGE_EMOJIS_AND_STICKERS";
+    Bitfields[Bitfields["USE_APPLICATION_COMMANDS"] = 31] = "USE_APPLICATION_COMMANDS";
+    Bitfields[Bitfields["REQUEST_TO_SPEAK"] = 32] = "REQUEST_TO_SPEAK";
+    Bitfields[Bitfields["MANAGE_EVENTS"] = 33] = "MANAGE_EVENTS";
+    Bitfields[Bitfields["MANAGE_THREADS"] = 34] = "MANAGE_THREADS";
+    Bitfields[Bitfields["CREATE_PUBLIC_THREADS"] = 35] = "CREATE_PUBLIC_THREADS";
+    Bitfields[Bitfields["CREATE_PRIVATE_THREADS"] = 36] = "CREATE_PRIVATE_THREADS";
+    Bitfields[Bitfields["USE_EXTERNAL_STICKERS"] = 37] = "USE_EXTERNAL_STICKERS";
+    Bitfields[Bitfields["SEND_MESSAGES_IN_THREADS"] = 38] = "SEND_MESSAGES_IN_THREADS";
+    Bitfields[Bitfields["USE_EMBEDDED_ACTIVITIES"] = 39] = "USE_EMBEDDED_ACTIVITIES";
+    Bitfields[Bitfields["MODERATE_MEMBERS"] = 40] = "MODERATE_MEMBERS";
+})(Bitfields || (Bitfields = {}));
+function calculate(permission, bitfield) {
+    const permissionBitfield = Bitfields[permission];
+    if (!permissionBitfield)
+        throw Error(`Invalid permission (${permission})`);
+    const flag = 1 << permissionBitfield;
+    return (bitfield & flag) === flag;
+}
+exports.calculate = calculate;
