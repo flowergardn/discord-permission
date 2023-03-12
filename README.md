@@ -2,9 +2,7 @@
 
 An easy to use Discord permission calculator.
 
-<p align="center">
-  `npm install discord-permission`
-</p>
+`npm install discord-permission`
 
 ## Usage
 
