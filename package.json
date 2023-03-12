@@ -1,6 +1,6 @@
 {
   "name": "discord-permission",
-  "version": "1.0.2",
+  "version": "1.0.4",
   "description": "A Discord permissions calculator",
   "main": "dist/index.js",
   "scripts": {
